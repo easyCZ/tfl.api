@@ -3,9 +3,13 @@
 # tfl.api
 NodeJS API for https://api.tfl.gov.uk/
 
+## Installation
+```
+npm install tfl.api --save
+```
 
 
-## Documentation
+## Usage
 
 ### Search
 Implements method supported by [TFL Search](https://api.tfl.gov.uk/#Search)
