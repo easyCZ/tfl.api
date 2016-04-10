@@ -18,6 +18,8 @@ var appKey = '<YOUR_APP_KEY>';
 var tfl = require('tfl.api')(appId, appKey);
 ```
 
+Each type of API can also be required separately as outlined in the examples below. Also see [tests](https://github.com/easyCZ/tfl.api/tree/master/test) for samples.
+
 Below is an outline of methods available to query. This library uses [superagent](https://visionmedia.github.io/superagent/) to make HTTP requests. Responses are returned as promises and response content can be accessed through `r => response.body`.
 
 ### Search
