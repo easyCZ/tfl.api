@@ -1,6 +1,6 @@
 ![Travis](https://travis-ci.org/easyCZ/tfl.api.svg)
 
-# tfl.api
+# Transport For London NodeJS API Wrapper (tfl.api)
 Simple NodeJS wrapper API for https://api.tfl.gov.uk/ using superagent and promises.
 
 ## Installation
