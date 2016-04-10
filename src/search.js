@@ -4,18 +4,23 @@ var superagent = require('superagent-promise')(require('superagent'), Promise);
 
 var URL = 'https://api.tfl.gov.uk/Search'
 
-function search(options) {
-  return superagent.get(URL).query(options);
-}
+module.exports = function (appId, appKey) {
 
-search.meta = function meta(metadataType) {
-  var metaURL = URL + '/Meta/' + metadataType;
-  return superagent.get(metaURL);
-}
+  var auth = { app_id: appId, app_key: appKey };
 
-search.busSchedules = function (query) {
-  var busURL = URL + '/Meta/';
-  return superagent.get(busURL).query({ query: query })
-}
+  var search = function search(options) {
+    return superagent.get(URL).query(options).query(auth);
+  }
 
-module.exports = search
+  search.meta = function meta(metadataType) {
+    var metaURL = URL + '/Meta/' + metadataType;
+    return superagent.get(metaURL).query(auth);
+  }
+
+  search.busSchedules = function (query) {
+    var busURL = URL + '/BusSchedules/';
+    return superagent.get(busURL).query({ query: query }).query(auth)
+  }
+
+  return search;
+}
