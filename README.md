@@ -23,6 +23,7 @@ var tfl = require('tfl.api')(appId, appKey);
 
 * [Accident Stats](https://github.com/easyCZ/tfl.api#accident-stats)
 * [Search](https://github.com/easyCZ/tfl.api#search)
+* [Place](https://github.com/easyCZ/tfl.api#place)
 
 Each type of API can also be required separately as outlined in the examples below. Also see [tests](https://github.com/easyCZ/tfl.api/tree/master/test) for samples.
 
@@ -58,4 +59,28 @@ var tfl = require('tfl.api')(appId, appKey);
 
 // Get accident stats for the year 2015
 tfl.accidentstats(2015).then(r => console.log(r.body))
+```
+
+### Place
+Implements API endpoint as supported by [TFL Place](https://api.tfl.gov.uk/#Place)
+
+```javascript
+var tfl = require('tfl.api')(appId, appKey);
+// or var place = require('tfl.api/place')(appId, appKey);
+
+// Retrieve a place by ID. Second argument can pass additional query params
+tfl.place.byId(123, { includeChildren: true }).then(...)
+
+// Retrieve places by lat/lng/radius
+tfl.place({ lat: 123, lon: 987, radius: 100}).then(...)
+
+// Retrieve places within a bounding box
+tfl.place({ swLat: 123, swLon: 987, neLat: 100, neLon= 999 }).then(...)
+
+// Get places of the given type at the given latitude and longitude
+tfl.byTypeAtLanLon('placeTypes', 123, 999).then(...)
+
+// Get metadata
+tfl.meta('placeTypes').then(...)
+
 ```
