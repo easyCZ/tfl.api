@@ -1,7 +1,7 @@
 ![Travis](https://travis-ci.org/easyCZ/tfl.api.svg)
 
 # tfl.api
-NodeJS API for https://api.tfl.gov.uk/
+Simple NodeJS wrapper API for https://api.tfl.gov.uk/ using superagent and promises.
 
 ## Installation
 ```
