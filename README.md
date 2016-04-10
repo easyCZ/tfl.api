@@ -8,6 +8,9 @@ Simple NodeJS wrapper API for https://api.tfl.gov.uk/ using superagent and promi
 npm install tfl.api --save
 ```
 
+## Contributing
+Contributions are welcome. Please submit a pull request. If you encounter any issues, please submit an [Issue](https://github.com/easyCZ/tfl.api/issues).
+
 ## Usage
 The Transport for London API requires the use of an `app_id` and `app_key`. You can register for one at [TFL API Portal](https://api-portal.tfl.gov.uk/login).
 
