@@ -33,8 +33,11 @@ var tfl = require('tfl.api')(appId, appKey);
 // or var search = require('tfl.api/search')(appId, appKey);
 
 
-// Search TFL with a query and additional params
+// Search TFL with a query
 tfl.search({ query: 'Thameslink' }).then(r => console.log(r.body))
+
+// Search TFL with a query and pagination options
+tfl.search({ query: 'Thameslink', pageSize: 5, pageFrom: 2 }).then(r => console.log(r.body));
 
 // Get metadata for search methods
 tfl.search.meta().then(r => console.log(r.body))
