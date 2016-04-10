@@ -12,6 +12,7 @@
     "url": "git+https://github.com/easyCZ/tfl.api.git"
   },
   "keywords": [
+    "Transport for London",
     "TFL",
     "API"
   ],

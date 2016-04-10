@@ -24,4 +24,8 @@ describe('tfl.api entry', () => {
     expect(tfl).to.have.property('accidentstats');
   })
 
+  it('should expose the tfl place package', () => {
+    expect(tfl).to.have.property('place');
+  })
+
 })

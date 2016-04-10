@@ -6,7 +6,6 @@ describe('TFL Search', () => {
 
   const appId = '12345';
   const appKey = 'abcdef';
-
   const search = Search(appId, appKey);
 
   it('should expose a default search method', () => {
