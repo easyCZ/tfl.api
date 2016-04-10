@@ -22,5 +22,7 @@ module.exports = function (appId, appKey) {
     return superagent.get(busURL).query({ query: query }).query(auth)
   }
 
+  search.URL = URL;
+
   return search;
 }

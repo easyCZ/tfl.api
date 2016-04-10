@@ -45,3 +45,14 @@ tfl.search.meta().then(r => console.log(r.body))
 tfl.search.busSchedules('<query>').then(r => console.log(r.body))
 
 ```
+
+### Accident Stats
+Implements API endpoint as supported by [TFL Accident Stats](https://api.tfl.gov.uk/#AccidentStats)
+
+```javascript
+var tfl = require('tfl.api')(appId, appKey);
+// or var accidentstats = require('tfl.api/accidentstats')(appId, appKey)
+
+// Get accident stats for the year 2015
+tfl.accidentstats(2015).then(r => console.log(r.body))
+```
