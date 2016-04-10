@@ -32,7 +32,6 @@ Implements method supported by [TFL Search](https://api.tfl.gov.uk/#Search)
 var tfl = require('tfl.api')(appId, appKey);
 // or var search = require('tfl.api/search')(appId, appKey);
 
-
 // Search TFL with a query
 tfl.search({ query: 'Thameslink' }).then(r => console.log(r.body))
 
