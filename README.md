@@ -27,7 +27,7 @@ var tfl = require('tfl.api')(appId, appKey);
 * Journey (TODO)
 * Line (TODO)
 * Mode (TODO)
-* Occupancy (TODO)
+* [Place](https://github.com/easyCZ/tfl.api#occupancy)
 * [Place](https://github.com/easyCZ/tfl.api#place)
 * Road (TODO)
 * [Search](https://github.com/easyCZ/tfl.api#search)
