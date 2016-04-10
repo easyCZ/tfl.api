@@ -48,6 +48,20 @@ var tfl = require('tfl.api')(appId, appKey);
 // Get accident stats for the year 2015
 tfl.accidentstats(2015).then(r => console.log(r.body))
 ```
+### Occupancy
+Implements API endpoint as supported by [TFL Place](https://api.tfl.gov.uk/#Occupancy)
+
+```javascript
+var tfl = require('tfl.api')(appId, appKey);
+// or var occupancy = require('tfl.api/occupancy')(appId, appKey);
+
+// Get occupancy of all car parks
+tfl.occupancy.carPark().then(...)
+
+// Get occupancy of a car park by id
+tfl.occupancy.carParkById().then(...)
+```
+
 
 ### Place
 Implements API endpoint as supported by [TFL Place](https://api.tfl.gov.uk/#Place)

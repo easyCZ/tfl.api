@@ -28,4 +28,8 @@ describe('tfl.api entry', () => {
     expect(tfl).to.have.property('place');
   })
 
+  it('should expose the tfl occupancy package', () => {
+    expect(tfl).to.have.property('occupancy');
+  })
+
 })
