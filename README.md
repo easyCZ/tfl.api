@@ -8,7 +8,7 @@ NodeJS API for https://api.tfl.gov.uk/
 ## Documentation
 
 ### Search
-Implements method supported by ![TFL Search](https://api.tfl.gov.uk/#Search)
+Implements method supported by [TFL Search](https://api.tfl.gov.uk/#Search)
 
 ```javascript
 var tfl = require('tfl.api');
