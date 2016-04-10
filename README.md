@@ -20,7 +20,7 @@ tfl.search({
   pageFrom: 2
 }).then(r => console.log(r))
 
-// Get metatdata for search methods
+// Get metadata for search methods
 tfl.search.meta().then(metadata => console.log(metatdata))
 
 // Get bus schedules
