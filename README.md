@@ -24,7 +24,7 @@ var tfl = require('tfl.api')(appId, appKey);
 * [Accident Stats](https://github.com/easyCZ/tfl.api#accident-stats)
 * Bikepoint (TODO)
 * Cycle Super Highway (TODO)
-* Journey (TODO)
+* [Journey](https://github.com/easyCZ/tfl.api#journey)
 * Line (TODO)
 * Mode (TODO)
 * [Occupancy](https://github.com/easyCZ/tfl.api#occupancy)
@@ -48,6 +48,27 @@ var tfl = require('tfl.api')(appId, appKey);
 // Get accident stats for the year 2015
 tfl.accidentstats(2015).then(r => console.log(r.body))
 ```
+
+### Journey
+Implements API endpoint as supported by [TFL Journey](https://api.tfl.gov.uk/#Journey)
+
+```javascript
+var tfl = require('tfl.api')(appId, appKey);
+// or var journey = require('tfl.api/journey')(appId, appKey)
+
+var origin = '1001067';   // City Thameslink
+var destination = '1000123'   // Kentish Town
+
+// Get a journey plan from City Thameslink to Kentish Town
+tfl.journey(origin, destination).then(...)
+tfl.journey(origin, destination, { via: '...', other: 'options'}).then(...)
+
+// Get Meta data for journey given a type as per TFL API
+tfl.journey.meta('modes').then(...)
+```
+
+
+
 ### Occupancy
 Implements API endpoint as supported by [TFL Place](https://api.tfl.gov.uk/#Occupancy)
 

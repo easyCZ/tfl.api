@@ -32,4 +32,8 @@ describe('tfl.api entry', () => {
     expect(tfl).to.have.property('occupancy');
   })
 
+  it('should expose the tfl journey package', () => {
+    expect(tfl).to.have.property('journey');
+  })
+
 })
