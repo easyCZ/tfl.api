@@ -12,9 +12,22 @@
     "url": "git+https://github.com/easyCZ/tfl.api.git"
   },
   "keywords": [
-    "Transport for London",
+    "transport for london",
+    "london",
+    "transport",
     "TFL",
-    "API"
+    "api",
+    "Accident Stats",
+    "Bikepoint",
+    "Cycle Super Highway",
+    "Journey",
+    "Line",
+    "Mode",
+    "Occupancy",
+    "Place",
+    "Road",
+    "Search",
+    "Stoppoint"
   ],
   "author": "easyCZ",
   "license": "ISC",
