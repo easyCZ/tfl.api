@@ -41,11 +41,6 @@
     "chai": "^3.5.0",
     "mocha": "^2.4.5"
   },
-  "babel": {
-    "presets": [
-      "es2015"
-    ]
-  },
   "dependencies": {
     "promise": "^7.1.1",
     "superagent": "^1.8.3",
