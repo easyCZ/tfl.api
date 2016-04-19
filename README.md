@@ -101,7 +101,7 @@ tfl.place({ lat: 123, lon: 987, radius: 100}).then(...)
 tfl.place({ swLat: 123, swLon: 987, neLat: 100, neLon= 999 }).then(...)
 
 // Get places of the given type at the given latitude and longitude
-tfl.byTypeAtLanLon('placeTypes', 123, 999).then(...)
+tfl.byTypeAtLatLon('placeTypes', 123, 999).then(...)
 
 // Get metadata
 tfl.meta('placeTypes').then(...)
