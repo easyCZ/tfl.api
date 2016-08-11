@@ -37,7 +37,8 @@ module.exports = function (appId, appKey) {
 
   stoppoint.byIdDisruptionStartEnd = function byIdDisruptionStartEnd(stopIds, startDate, endDate, options) {
     var stopURL = [URL, stopIds, 'Disruption'].join('/');
-    return superagent.get(stopURL).query({ startDate: startDate, endDate: endDate }).query(options).query(auth);
+    stopURL = stopURL + '?startDate=' + startDate + '&endDate=' + endDate;
+    return superagent.get(stopURL).query(options).query(auth);
   }
 
   stoppoint.meta = function meta(metadataType) {
@@ -57,7 +58,8 @@ module.exports = function (appId, appKey) {
 
   stoppoint.modeDisruptionStartEnd = function modeDisruptionStartEnd(modes, startDate, endDate, options) {
     var stopURL = [URL, 'Mode', modes, 'Disruption'].join('/');
-    return superagent.get(stopURL).query({ startDate: startDate, endDate: endDate }).query(options).query(auth);
+    stopURL = stopURL + '?startDate=' + startDate + '&endDate=' + endDate;
+    return superagent.get(stopURL).query(options).query(auth);
   }
 
   stoppoint.route = function route(stopId, options) {
@@ -71,8 +73,8 @@ module.exports = function (appId, appKey) {
   }
 
   stoppoint.servicetypes = function serviceTypes(stopId, options) {
-    var stopURL = URL + '/ServiceTypes';
-    return superagent.get(stopURL).query({ id: stopId }).query(options).query(auth);
+    var stopURL = URL + '/ServiceTypes?id=' + stopId;
+    return superagent.get(stopURL).query(options).query(auth);
   }
 
   stoppoint.sms = function sms(stopId, options) {

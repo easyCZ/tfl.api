@@ -32,7 +32,7 @@ describe('StopPoint', () => {
 
     expect(req.qs).to.have.property('lat', wandsworthbridge.lat);
     expect(req.qs).to.have.property('lon', wandsworthbridge.lng);
-    expect(req.qs).to.have.property('stopTypes', stopTypes);
+    expect(req.qs).to.have.property('stopTypes', 'NaptanPublicBusCoachTram');
     expect(req.qs).to.have.property('app_id', appId);
     expect(req.qs).to.have.property('app_key', appKey);
   })
@@ -62,7 +62,7 @@ describe('StopPoint', () => {
   })
 
   it('byCanReachOnLine should pass additional options through', () => {
-    const req = stoppoint.byId(stopId, lineId, { serviceTypes: 'regular,night' });
+    const req = stoppoint.byCanReachOnLine(stopId, lineId, { serviceTypes: 'regular,night' });
 
     expect(req.qs).to.have.property('serviceTypes', 'regular,night');
     expect(req.qs).to.have.property('app_id', appId);
@@ -178,7 +178,7 @@ describe('StopPoint', () => {
   it('route should construct the url', () => {
     const req = stoppoint.route(stopId);
 
-    expect(req.url).to.be.eql(stoppoint.URL + '490008434N/Route');
+    expect(req.url).to.be.eql(stoppoint.URL + '/490008434N/Route');
     expect(req.qs).to.have.property('app_id', appId);
     expect(req.qs).to.have.property('app_key', appKey);
   })  
