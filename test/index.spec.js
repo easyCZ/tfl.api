@@ -36,4 +36,8 @@ describe('tfl.api entry', () => {
     expect(tfl).to.have.property('journey');
   })
 
+  it('should expose the tfl stoppoint package', () => {
+    expect(tfl).to.have.property('stoppoint');
+  })
+
 })
